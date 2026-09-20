@@ -1,0 +1,43 @@
+{
+  "name": "window-color-palette",
+  "displayName": "Window Color Palette",
+  "description": "Give each VS Code project window a distinct accent color from a visual palette.",
+  "version": "0.1.0",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Themes"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "windowColorPalette.pick",
+        "title": "Window Colors: Choose Accent"
+      },
+      {
+        "command": "windowColorPalette.autoAssign",
+        "title": "Window Colors: Assign from Project"
+      },
+      {
+        "command": "windowColorPalette.reset",
+        "title": "Window Colors: Reset Accent"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "windowColorPalette.pick",
+        "key": "ctrl+alt+shift+c",
+        "mac": "cmd+alt+shift+c"
+      }
+    ]
+  },
+  "scripts": {
+    "check": "node --check extension.js"
+  },
+  "license": "MIT"
+}
